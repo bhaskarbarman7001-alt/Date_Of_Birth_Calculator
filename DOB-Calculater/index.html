@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 3D Background -->
+    <canvas id="bg"></canvas>
+
+    <div class="container">
+        <header>
+            <div class="logo">AGE<span>VERSE</span></div>
+            <div class="status">● 3D EXPERIENCE</div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <p class="tag">YOUR LIFE IN NUMBERS</p>
+                <h1>Discover Your <span>Age</span></h1>
+                <p class="description">
+                    Every second counts. Explore your journey through time.
+                </p>
+            </section>
+
+            <section class="calculator">
+                <h2>🎂 Age Calculator</h2>
+                <p>Select your date of birth</p>
+
+                <input type="date" id="dob">
+
+                <button id="calculate">Calculate My Age ↗</button>
+                <button id="reset" class="reset">Reset Calculator</button>
+
+                <p id="error"></p>
+
+                <div id="results" class="results">
+                    <div class="main-result">
+                        <p>YOUR EXACT AGE</p>
+                        <h2 id="age">0 Years</h2>
+                        <div class="age-grid">
+                            <div><strong id="years">0</strong><small>Years</small></div>
+                            <div><strong id="months">0</strong><small>Months</small></div>
+                            <div><strong id="days">0</strong><small>Days</small></div>
+                        </div>
+                    </div>
+
+                    <div class="extra-grid">
+                        <div class="extra">
+                            <small>Total Days</small>
+                            <strong id="totalDays">0</strong>
+                        </div>
+                        <div class="extra">
+                            <small>Total Hours</small>
+                            <strong id="totalHours">0</strong>
+                        </div>
+                        <div class="extra">
+                            <small>Total Minutes</small>
+                            <strong id="totalMinutes">0</strong>
+                        </div>
+                    </div>
+
+                    <div class="birthday">
+                        <p>🎉 YOUR NEXT BIRTHDAY</p>
+                        <h3 id="birthdayDate">--</h3>
+                        <h2 id="countdown">-- Days Left</h2>
+                        <p id="weekday"></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            AGEVERSE © 2026 | Designed with Three.js
+        </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #050817;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+#bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    padding: 25px 7%;
+    pointer-events: none;
+}
+
+header, main, footer {
+    pointer-events: none;
+}
+
+.calculator, .calculator * {
+    pointer-events: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #00d9ff;
+}
+
+.status {
+    color: #00e6b5;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.hero {
+    text-align: center;
+    margin: 65px 0 35px;
+}
+
+.tag {
+    color: #00d9ff;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 65px);
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #00d9ff;
+    text-shadow: 0 0 25px #00d9ff;
+}
+
+.description {
+    color: #aab4d0;
+    font-size: 15px;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 520px;
+    margin: auto;
+    padding: 30px;
+    background: rgba(15, 25, 55, 0.78);
+    border: 1px solid rgba(0, 217, 255, 0.4);
+    border-radius: 22px;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 0 45px rgba(0, 217, 255, 0.12);
+}
+
+.calculator h2 {
+    margin-bottom: 12px;
+}
+
+.calculator > p {
+    color: #aab4d0;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #00d9ff;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #101c39;
+    color: white;
+    color-scheme: dark;
+}
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #00c9ff, #347bff);
+    color: #00101b;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px #00d9ff;
+}
+
+button.reset {
+    background: rgba(255,255,255,.1);
+    color: white;
+    border: 1px solid #53668e;
+}
+
+#error {
+    color: #ff7777;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.results {
+    display: none;
+    margin-top: 25px;
+}
+
+.main-result, .birthday {
+    text-align: center;
+    background: rgba(0,217,255,.08);
+    border: 1px solid rgba(0,217,255,.2);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.main-result > p, .birthday > p {
+    color: #00d9ff;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.main-result h2 {
+    font-size: 27px;
+    margin: 15px 0;
+}
+
+.age-grid, .extra-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.age-grid div, .extra {
+    background: rgba(255,255,255,.06);
+    padding: 15px 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.age-grid strong, .extra strong {
+    display: block;
+    font-size: 23px;
+    color: #00d9ff;
+    margin-bottom: 7px;
+}
+
+.age-grid small, .extra small {
+    color: #aab4d0;
+    font-size: 11px;
+}
+
+.birthday {
+    margin-top: 15px;
+}
+
+.birthday h3 {
+    margin: 12px 0;
+}
+
+.birthday h2 {
+    color: #00d9ff;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 0 10px;
+    color: #7785a8;
+    font-size: 12px;
+}
+
+@media(max-width: 500px) {
+    .container {
+        padding: 20px 5%;
+    }
+
+    .hero {
+        margin: 50px 0 30px;
+    }
+
+    .calculator {
+        padding: 20px;
+    }
+
+    .age-grid strong, .extra strong {
+        font-size: 19px;
+    }
+
+    .status {
+        font-size: 9px;
+    }
+}
